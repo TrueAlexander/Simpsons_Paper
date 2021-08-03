@@ -1,0 +1,240 @@
+@import "nullstyle.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+//font-family: 'Archivo Black', sans-serif;
+
+body {
+  background-color: #fff0df;
+  color: #464444;
+}
+
+.wrapper{
+  max-width: 100%;
+  margin: 20px;
+  background-color: #ffffff;
+  overflow: hidden;  
+}
+.container{
+  max-width: 1300px;
+  margin: 0 auto;  
+}
+.header__title{
+  padding: 20px 10px 0;
+  font-family:'Archivo Black', sans-serif;
+  font-size: 6.9em;
+  text-align: center;
+}
+.header {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  
+  &__subtitle {
+  
+    margin: 0 40px;
+    &::before {
+      content: "";
+      max-width: 100%;
+      margin: 10px auto;
+      border-top: 4px solid;
+      display: block;     
+    }
+    &::after {
+      content: "";
+      max-width: 100%;
+      padding-top: 10px;
+      margin: 0 auto;
+      border-bottom: 4px solid;
+      display: block;
+    }    
+  }
+ 
+  &__row {
+    padding: 0 10px;
+    display: flex;
+    font-size: 2.5em;
+    font-style: italic;
+    justify-content: space-between; 
+  }
+}
+
+.main {
+  padding: 30px 0;
+
+  &__title {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 6em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  &__row {
+    width: 95%;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  &__column {
+    flex: 1 1 50%;
+    padding: 0 15px;
+    position: relative;
+  }
+  
+  &__img {
+ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    
+    img {
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);  
+    }
+  }
+  &__subtitle {
+   
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__article {
+    display: flex;
+    margin: 30px 0 -12px;
+   
+  }
+  &__text {
+    flex: 1 1 50%;
+    padding: 0 12px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.2em;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.2em;
+  }
+}
+
+@media (max-width:1150px) {
+     
+  .header__title {
+    font-size: 4em;
+  }
+  .header__row {
+    font-size: 1.5em;
+  }
+
+  .main {
+    padding: 15px 0;
+  
+    &__title {
+      font-size: 3.6em;
+    }
+  
+    &__row {
+
+      margin: 15px auto 0;
+      display: block; 
+    }
+    &__column {
+      padding: 0 15px;
+    }
+    
+    &__img {
+   
+      position: static;
+      transform: translate(0, 0);
+      
+      img {
+        margin: 0 auto;
+        width: auto;
+        position: static;
+        transform: translateY(0);  
+      }
+    }
+    &__subtitle {
+      
+      font-size: 2.2em;
+      margin-top: 10px;
+    }
+    &__article {
+      margin: 15px 0 -12px;
+    }
+
+  }
+}
+
+@media (max-width:640px) {
+     
+  .header__title {
+    font-size: 2.4em;
+  }
+
+  .header { 
+  &__subtitle {
+  
+    margin: 0 15px;
+    &::before {
+      content: "";
+      max-width: 100%;
+      margin: 5px auto;
+      border-top: 3px solid;
+      display: block;   
+    }
+    &::after {
+      content: "";
+      max-width: 100%;
+      padding-top: 5px;
+      margin: 0 auto;
+      border-bottom: 3px solid;
+      display: block;
+    }    
+  }
+ 
+  &__row {
+    font-size: 1em;
+   }
+ }
+ 
+
+  .main {
+    padding: 10px 0;
+  
+    &__title {
+      font-size: 2.3em;
+    }
+  
+    &__row {
+      margin: 10px auto 0;
+    }
+    &__column {
+      padding: 0 10px;
+    }
+    
+    &__img { 
+      img {
+        max-width: 100%; 
+      }
+    }
+    &__subtitle {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+    &__article {
+      display: block;
+      margin: 0 0 -12px;
+    }
+    &__text {
+      padding: 10px 12px 0;  
+    }
+  }
+}
