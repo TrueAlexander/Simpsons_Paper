@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*Обнуление*/
+/*reset CSS*/
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 * {
   padding: 0;
